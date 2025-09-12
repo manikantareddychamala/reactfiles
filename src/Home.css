@@ -1,0 +1,237 @@
+/* ---------------------- Overall Page ---------------------- */
+.home-page {
+  background: linear-gradient(135deg, green 0%, #C8E6C9 50%, green 100%);
+  color: #333;
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  position: relative;
+  line-height: 1.5;
+  background-attachment: fixed; /* smooth effect */
+}
+
+/* ---------------------- Section Styling ---------------------- */
+.category-section,
+.reviews-section,
+.deals-section {
+  background: #F1F8E9;
+  border-radius: 16px;
+  padding: 40px 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------------------- Headings ---------------------- */
+.category-section h2,
+.reviews-section h2,
+.deals-section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ---------------------- Cards ---------------------- */
+.card {
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------------------- Buttons ---------------------- */
+button {
+  background: #66bb6a;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  background: #388e3c;
+  transform: scale(1.05);
+}
+
+/* ---------------------- Inputs ---------------------- */
+input[type="text"],
+input[type="email"] {
+  border: 2px solid #a5d6a7;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #388e3c;
+}
+
+/* ---------------------- Coupon Messages ---------------------- */
+.coupon-message.success {
+  color: #2e7d32;
+  font-weight: bold;
+}
+.coupon-message.error {
+  color: #c62828;
+  font-weight: bold;
+}
+
+/* ---------------------- Carousel + Chef Images ---------------------- */
+.chef-img {
+  width: 120px;
+  height: auto;
+}
+.custom-carousel img {
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ---------------------- Festival Offer Section ---------------------- */
+.festival-offer-card {
+  position: relative;
+  overflow: hidden;
+  height: 280px; /* bigger like Amazon banners */
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.festival-offer-card video,
+.festival-offer-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Gradient overlay */
+.festival-offer-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.65) 30%, rgba(0,0,0,0.3) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Content */
+.festival-offer-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 0 2rem;
+}
+
+/* Title & text */
+.festival-offer-content h5 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.festival-offer-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* CTA button */
+.red-color-shop {
+  background: #ff4747;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+.red-color-shop:hover {
+  background: #e63c3c;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .festival-offer-card {
+    height: 320px;
+  }
+  .festival-offer-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+  .festival-offer-content h5 {
+    font-size: 1.3rem;
+  }
+  .festival-offer-content p {
+    font-size: 1rem;
+  }
+  .red-color-shop {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+/* ---------------------- More Fresh Picks Section ---------------------- */
+.extra-cards-section {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.extra-cards-section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+.extra-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+.extra-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+.extra-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+.extra-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+.extra-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.extra-card .card-body {
+  padding: 1rem;
+  background: #fff;
+}
+.extra-card .card-body h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #444;
+}

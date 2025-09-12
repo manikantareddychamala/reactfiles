@@ -1,0 +1,131 @@
+/* Full background for Milk page */
+.milk-bg {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* center horizontally */
+  justify-content: flex-start; /* keep items from top */
+  padding: 20px;
+}
+
+
+/* Page title */
+.home-titl {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+/* Product list - now grid for 4x2 */
+.ram {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 per row */
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1000px;
+  background: transparent;
+}
+
+.ram li {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  background-color: antiquewhite;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.ram li:hover {
+  transform: scale(1.03);
+}
+
+.ram img {
+  width: 100%;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 18px;
+  margin-bottom: 18px;
+}
+.product-card img {
+  width: 100%;
+  height: 2%;
+  object-fit: contain; /* 🔁 changed from 'cover' to 'contain' */
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color:#28a745 !important; /* Optional: to fill blank space nicely */
+  padding: 5px;             /* Optional: padding around image */
+  display: block;
+}
+
+
+.ram h3 {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #333;
+}
+
+.ram .price {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #218838;
+}
+
+.ram .description {
+  font-size: 14px;
+  margin-bottom: 10px;
+  min-height: 40px; /* keeps cards even */
+}
+
+/* Add to cart button */
+.ram button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ram button:hover {
+  background-color: #218838;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: 1px solid #28a745;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination button:hover {
+  background: #28a745;
+  color: white;
+}
+
+.pagination .active-page {
+  background: #28a745;
+  color: white;
+}

@@ -1,0 +1,357 @@
+/* Cart Container */
+.cart-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f0fdf4; /* light fresh green background */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Cart Title */
+.cart-title {
+  color: #14532d; /* dark green */
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* Cart Content Layout */
+.cart-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* Left Side - Cart Items */
+.cart-list {
+  flex: 2;
+  list-style: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #bbf7d0; /* greenish divider */
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(21, 128, 61, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(21, 128, 61, 0.15);
+}
+
+.cart-item img,
+.cart-item-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.item-details {
+  flex: 1;
+  color: #064e3b;
+  font-size: 15px;
+}
+
+.cart-buttons button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  background: #22c55e; /* green button */
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.cart-buttons button:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+
+/* Order Summary */
+.order-summary {
+  flex: 1;
+  max-width: 400px;
+  background: #ecfdf5; /* mint background */
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(21, 128, 61, 0.08);
+  text-align: center;
+  position: sticky;
+  top: 20px;
+  border: 1px solid #bbf7d0;
+}
+
+.order-summary h2 {
+  margin-bottom: 20px;
+  color: #065f46;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.order-summary h3 {
+  margin: 15px 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #047857;
+}
+
+/* Inputs */
+.order-summary input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 1px solid #86efac;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.order-summary input:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.4);
+}
+
+/* Discount Buttons */
+.discount-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.discount-buttons button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 12px 0;
+  border-radius: 12px;
+  border: 1px solid #22c55e;
+  background: #dcfce7;
+  color: #065f46;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.discount-buttons button:hover {
+  background: #bbf7d0;
+  border-color: #16a34a;
+}
+
+/* Apply Coupon Button */
+.apply-coupon,
+.checkout-btn {
+  width: 100%;
+  padding: 14px 0;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  background: #22c55e;
+  color: white;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.apply-coupon:hover,
+.checkout-btn:hover {
+  background: #16a34a;
+  transform: translateY(-2px);
+}
+
+/* Payment Modal - Overlay */
+.payment-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* dark transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* makes it appear above everything */
+  padding: 20px;
+}
+
+/* Modal Content Box with popup animation */
+.payment-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: popup-in 0.3s ease-in-out;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Popup animation */
+@keyframes popup-in {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Payment Method Section inside Modal */
+.payment-method {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.payment-method h3 {
+  color: #065f46;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Payment method buttons container */
+.payment-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+/* Small payment option buttons (UPI, Debit/Credit Card) */
+.payment-option-btn {
+  flex: none;
+  width: 110px;
+  padding: 12px 0;
+  background-color: #dcfce7;
+  border: 2px solid #22c55e;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #065f46;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(34, 197, 94, 0.3);
+}
+
+.payment-option-btn:hover {
+  background-color: #bbf7d0;
+}
+
+.payment-option-btn.active {
+  background-color: #22c55e;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(34, 197, 94, 0.7);
+}
+
+/* Payment box for either QR or Card Inputs */
+.payment-box {
+  background: #f0fdf4;
+  border: 2px dashed #22c55e;
+  border-radius: 15px;
+  padding: 20px 15px;
+  margin-top: 10px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(21, 128, 61, 0.1);
+}
+
+/* Payment box heading */
+.payment-box h4 {
+  color: #065f46;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/* QR Code styling */
+.payment-box svg {
+  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(21, 128, 61, 0.15);
+}
+
+/* Card inputs inside payment box */
+.payment-box input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1.5px solid #86efac;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.payment-box input:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
+}
+
+/* Checkout buttons below payment box */
+.checkout-actions {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Complete purchase and Send Email buttons */
+.checkout-btn {
+  background: #22c55e;
+  color: white;
+  border-radius: 12px;
+  font-weight: 700;
+  padding: 14px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background: #16a34a;
+  transform: translateY(-2px);
+}
+
+/* Email send button with different color */
+.checkout-btn.email {
+  background: #065f46;
+}
+
+.checkout-btn.email:hover {
+  background: #047857;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cart-content {
+    flex-direction: column;
+  }
+  .order-summary {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}

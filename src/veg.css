@@ -1,0 +1,161 @@
+/* Overall page */
+/* Overall page */
+/* Overall page */
+.veg-page {
+  /* stronger green gradient like home */
+  background: linear-gradient(135deg, linear-gradientś 0%,#C8E6C9 50%, green 100%);
+  min-height: 100vh;
+  padding: 30px 0;
+  text-align: center;
+  color: #333;
+  background-attachment: fixed; /* smooth scroll effect */
+}
+
+
+/* Page title */
+.page-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #28a745 !important; /* Fresh Mart green */
+}
+
+/* Product list grid */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 per row */
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Product card */
+.product-card {
+  background-color: #F1F8E9 !important;
+  border-radius: 22px;
+  padding: 15px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.image-container {
+  position: relative;
+}
+
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Discount tag */
+.discount-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #f1c40f !important; /* Yellow tag */
+  color: #333 !important;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+}
+
+/* Texts */
+.product-card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.image-container {
+  position: relative;
+  width: 99%;
+  height: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; /* Optional: visual padding */
+  border-radius: 8px; /* ensures image doesn’t overflow */
+}
+
+.product-card img {
+  max-width: 98%;
+  max-height: 250%;
+ /* show full image */
+ 
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-card .price {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #218838 !important; /* Green price */
+}
+
+.product-card .description {
+  font-size: 14px;
+  margin-bottom: 10px;
+  min-height: 40px;
+}
+
+/* Add to Cart button */
+.add-cart-btn {
+  background-color: #28a745 !important;
+  color: #fff !important;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-cart-btn:hover {
+  background-color: #218838 !important;
+}
+
+/* Pagination */
+/* Pagination container flex layout */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* Push Prev button to left */
+.pagination-container > button:first-child,
+.pagination-container > button:last-child {
+  padding: 6px 12px;   /* smaller padding */
+  font-size: 14px;     /* smaller font */
+  min-width: 70px;     /* smaller fixed width */
+}
+
+
+/* Page numbers container */
+.pagination-container > div {
+  display: flex;
+  gap: 8px;
+}
+
+/* ---------------------- Overall Page ---------------------- */
+/* Overall page */
+/* Overall page */
+
+
+
+

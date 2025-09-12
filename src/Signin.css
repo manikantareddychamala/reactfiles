@@ -1,0 +1,84 @@
+/* Full screen container with fresh background */
+.signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9); /* soft green gradient */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Login box */
+.signin-box {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  width: 360px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.signin-box:hover {
+  transform: translateY(-5px); /* subtle lift */
+}
+
+/* Title */
+.signin-box h1 {
+  margin-bottom: 1.5rem;
+  color: #2e7d32; /* fresh dark green */
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Input group */
+.input-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: #388e3c; /* green shade */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #a5d6a7;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.input-group input:focus {
+  border-color: #43a047; /* darker green on focus */
+}
+
+/* Error message */
+.error {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #66bb6a, #43a047);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #81c784, #388e3c);
+  transform: scale(1.02);
+}
