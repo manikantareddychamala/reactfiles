@@ -306,11 +306,11 @@ function Home() {
         <div className="extra-cards-grid">
           {[
             { title: "🥤 Drinks", img: "/images/picks/Drinksimgs.jpg", link: "/drinks" },
-            { title: "🥗 Veggies", img: "Images/picks/🥦🍓 Boost Your Health with Colorful Vegetables and Fruits!.jpg", link: "/veg" },
-            { title: "🥛 Milk", img: "Images/picks/milk.jpg", link: "/milk" },
-            { title: "🍗 Nonveg", img: "Images/picks/Fishfingers.jpg", link: "/nonveg" },
-            { title: "🍫 Chocolates", img: "Images/picks/Snickers.jpg", link: "/chocolates" },
-            { title: "🍫 Chocolates", img: "Images/picks/Feastables Milk Chocolate 60g.jpg", link: "/chocolates" },
+            { title: "🥗 Veggies", img: "/images/picks/🥦🍓 Boost Your Health with Colorful Vegetables and Fruits!.jpg" },
+            { title: "🥛 Milk", img: "/images/picks/Milk.jpg", link: "/milk" },
+            { title: "🍗 Nonveg", img: "/images/picks/Fishfingers.jpg", link: "/nonveg" },
+            { title: "🍫 Chocolates", img: "/images/picks/Snickers.jpg", link: "/chocolates" },
+            { title: "🍫 Chocolates", img: "/images/picks/Feastables Milk Chocolate 60g.jpg", link: "/chocolates" },
           ].map((pick, index) => (
             <NavLink key={index} to={pick.link} className="extra-card-link">
               <div className="extra-card">
