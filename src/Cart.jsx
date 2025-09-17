@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addOrder, clearCart, decreaseQty, increaseQty, removeFromCart, } from './store';
-import './Cart.css';
+import './cart.css';
 import { calculationTotal, getCoupnDiscount } from './discount';
 import party from 'party-js';
 import emailjs from '@emailjs/browser';
