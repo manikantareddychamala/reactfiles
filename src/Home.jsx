@@ -10,7 +10,7 @@ function Home() {
       name: "Ramesh Kumar",
       review: "Fresh Mart always delivers the best quality. I love their veggies!",
       rating: 5,
-      image: "Images/picks/user1.jpg",
+      image: "/images/picks/user1.jpg",
     },
     {
       id: 2,
@@ -62,7 +62,7 @@ function Home() {
       {/* Top Chefs + Carousel */}
       <div className="chef-carousel-layout d-flex justify-content-center align-items-center my-5">
         <img
-          src="Images/picks/download.jpg"
+          src="/images/picks/download.jpg"
           alt="Chef Left"
           className="chef-img left-chef"
         />
@@ -71,7 +71,7 @@ function Home() {
             <Carousel.Item>
               <img
                 className="d-block w-100 rounded"
-                src="Images/picks/vegetablecarsoulimge.jpg"
+                src="/images/picks/vegetablecarsoulimge.jpg"
                 alt="Fresh Veggies"
               />
               <Carousel.Caption>
@@ -82,7 +82,7 @@ function Home() {
             <Carousel.Item>
               <img
                 className="d-block w-100 rounded"
-                src="Images/picks/Charcoal Charm.jpg"
+                src="/images/picks/Charcoal Charm.jpg"
                 alt="BBQ Special"
               />
               <Carousel.Caption>
@@ -93,7 +93,7 @@ function Home() {
             <Carousel.Item>
               <img
                 className="d-block w-100 rounded"
-                src="Images/picks/milkshaaaaimage.jpg"
+                src="/images/picks/milkshaaaaimage.jpg"
                 alt="Milkshake"
               />
               <Carousel.Caption>
@@ -104,7 +104,7 @@ function Home() {
             <Carousel.Item>
               <img
                 className="d-block w-100 rounded"
-                src="Images/picks/chickenimagesaaa.jpg"
+                src="/images/picks/chickenimagesaaa.jpg"
                 alt="Crispy Chicken"
               />
               <Carousel.Caption>
@@ -115,7 +115,7 @@ function Home() {
           </Carousel>
         </div>
         <img
-          src="Images/picks/download (1).jpg"
+          src="/images/picks/download (1).jpg"
           alt="Chef Right"
           className="chef-img right-chef"
         />
@@ -129,7 +129,7 @@ function Home() {
             <NavLink to="/veg" className="text-decoration-none text-dark">
               <div className="card shadow-sm h-100">
                 <img
-                  src="Images/picks/Green Vegetables Photos - Download Free High-Quality Pictures _ Freepik.jpg"
+                  src="/images/picks/Green Vegetables Photos - Download Free High-Quality Pictures _ Freepik.jpg"
                   className="card-img-top"
                   alt="Veg"
                   style={{ height: "200px", objectFit: "cover" }}
@@ -144,7 +144,7 @@ function Home() {
             <NavLink to="/nonVeg" className="text-decoration-none text-dark">
               <div className="card shadow-sm h-100">
                 <img
-                  src="Images/picks/Noveg111.jpg"
+                  src="/images/picks/Noveg111.jpg"
                   className="card-img-top"
                   alt="Non-Veg"
                   style={{ height: "200px", objectFit: "cover" }}
@@ -159,7 +159,7 @@ function Home() {
             <NavLink to="/milk" className="text-decoration-none text-dark">
               <div className="card shadow-sm h-100">
                 <img
-                  src="Images/picks/shake.jpg"
+                  src="/images/picks/shake.jpg"
                   className="card-img-top"
                   alt="Milkshake/"
                   style={{ height: "200px", objectFit: "cover" }}
@@ -174,7 +174,7 @@ function Home() {
             <NavLink to="/desserts" className="text-decoration-none text-dark">
               <div className="card shadow-sm h-100">
                 <img
-                  src="Images/picks/Desserts%20img.jpg"
+                  src="/images/picks/Desserts%20img.jpg"
                   className="card-img-top"
                   alt="Desserts"
                   style={{ height: "200px", objectFit: "cover" }}
@@ -200,25 +200,25 @@ function Home() {
           {[
             {
               title: "🥦 Fresh Broccoli",
-              img: "Images/picks/🥦🍓 Boost Your Health with Colorful Vegetables and Fruits!.jpg",
+              img: "/images/picks/🥦🍓 Boost Your Health with Colorful Vegetables and Fruits!.jpg",
               discount: "20% OFF",
               link: "/veg",
             },
             {
               title: "🍗 Chicken Drumsticks",
-              img: "Images/picks/The Fragrant Curry Cascade.jpg",
+              img: "/images/picks/The Fragrant Curry Cascade.jpg",
               discount: "15% OFF",
               link: "/nonVeg",
             },
             {
               title: "🥤 SoftDrinks/ Beverages",
-              img: "Images/picks/download (4).jpg",
+              img: "/images/picks/download (4).jpg",
               discount: "25% OFF",
               link: "/milk",
             },
             {
               title: "🍰 Choco Lava Cake",
-              img: "Images/picks/Floating Chocolate Brownies with Walnuts and Splashing Melted Chocolate in MidAir _ Premium AI-generated image.jpg",
+              img: "/images/picks/Floating Chocolate Brownies with Walnuts and Splashing Melted Chocolate in MidAir _ Premium AI-generated image.jpg",
               discount: "30% OFF",
               link: "/desserts",
             },
@@ -267,7 +267,7 @@ function Home() {
       {/* Festival Offer Section */}
       <section className="festival-offer-card my-5 container">
         <video autoPlay loop muted playsInline>
-          <source src="/Images/picks/Offer video.mp4" type="video/mp4" />
+          <source src="/images/picks/Offer video.mp4" type="video/mp4" />
         </video>
         <div className="festival-offer-overlay"></div>
         <div className="festival-offer-content d-flex align-items-center justify-content-between px-3">
@@ -280,13 +280,13 @@ function Home() {
             <div id="offerCarousel" className="carousel slide" data-bs-ride="carousel">
               <div className="carousel-inner">
                 <div className="carousel-item active">
-                  <img src="/Images/picks/veg1.jpg" className="d-block w-100" alt="Veg 1" />
+                  <img src="/images/picks/veg1.jpg" className="d-block w-100" alt="Veg 1" />
                 </div>
                 <div className="carousel-item">
-                  <img src="/Images/picks/veg2.jpg" className="d-block w-100" alt="Veg 2" />
+                  <img src="/images/picks/veg2.jpg" className="d-block w-100" alt="Veg 2" />
                 </div>
                 <div className="carousel-item">
-                  <img src="/Images/picks/veg3.jpg" className="d-block w-100" alt="Veg 3" />
+                  <img src="/images/picks/veg3.jpg" className="d-block w-100" alt="Veg 3" />
                 </div>
               </div>
               <button className="carousel-control-prev" type="button" data-bs-target="#offerCarousel" data-bs-slide="prev">
@@ -305,7 +305,7 @@ function Home() {
         <h2>🍹 More Fresh Items</h2>
         <div className="extra-cards-grid">
           {[
-            { title: "🥤 Drinks", img: "Images/picks/Drinksimgs.jpg", link: "/drinks" },
+            { title: "🥤 Drinks", img: "/images/picks/Drinksimgs.jpg", link: "/drinks" },
             { title: "🥗 Veggies", img: "Images/picks/🥦🍓 Boost Your Health with Colorful Vegetables and Fruits!.jpg", link: "/veg" },
             { title: "🥛 Milk", img: "Images/picks/milk.jpg", link: "/milk" },
             { title: "🍗 Nonveg", img: "Images/picks/Fishfingers.jpg", link: "/nonveg" },

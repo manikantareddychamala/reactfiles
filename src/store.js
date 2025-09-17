@@ -5,7 +5,7 @@ const productsSlice = createSlice({
   name: "Products",
   initialState: {
     Veg: [
-      { id: 1001, name: "Tomato", price: 12, discount: 10, Image: "Images/picks/Tomato.jpeg", descrition: "This tomato" },
+      { id: 1001, name: "Tomato", price: 12, discount: 10, Image: "images/picks/Tomato.jpeg", descrition: "This tomato" },
       { id: 1002, name: "Chilli", price: 24, discount: 15, Image: "Images/picks/chilli.jpeg", descrition: "To get good knowledge" },
       { id: 1003, name: "Sorakai", price: 24, discount: 20, Image: "Images/picks/sorakai.jpeg", descrition: "To get good knowledge" },
       { id: 1004, name: "Potato", price: 19, discount: 5, Image: "Images/picks/Potato.jpeg", descrition: "To get good knowledge" },
@@ -62,9 +62,9 @@ const productsSlice = createSlice({
     ],
 
     Drinks: [
-      { id: 1, name: "Oreo", price: 180, discount: 20, Image: "Images/picks/Oreao.jpeg", descrption: "Oreo milkshake" },
-      { id: 2, name: "Pista", price: 180, discount: 18, Image: "Images/picks/pista.jpeg", descrption: "Pista shake" },
-      { id: 3, name: "Limca", price: 75, discount: 12, Image: "Images/picks/Limca.jpg", descrption: "Rosemilk" },
+      { id: 1, name: "Oreo", price: 180, discount: 20, Image: "/images/picks/Oreao.jpeg", descrption: "Oreo milkshake" },
+      { id: 2, name: "Pista", price: 180, discount: 18, Image: "/images/picks/pista.jpeg", descrption: "Pista shake" },
+      { id: 3, name: "Limca", price: 75, discount: 12, Image: "/images/picks/Limca.jpg", descrption: "Rosemilk" },
       { id: 4, name: "Maaza", price: 200, discount: 22, Image: "Images/picks/maaza.jpg", descrption: "Kiwi shake" },
       { id: 5, name: "7up", price: 180, discount: 25, Image: "Images/picks/never 7up.jpg", descrption: "Chocolate shake" },
       { id: 6, name: "Pepesi", price: 180, discount: 15, Image: "Images/picks/pepsi.jpg", descrption: "Mango shake" },
