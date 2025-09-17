@@ -3,7 +3,7 @@ import { addToCart } from "./store";
 import { useState } from "react";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './Veg.css';
+import './veg.css';
 
 function Drinks() {
   const dispatch = useDispatch();

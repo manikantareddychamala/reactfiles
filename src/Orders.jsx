@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import './Veg.css'; // reuse Veg theme
+import './veg.css'; // reuse Veg theme
 
 function Orders() {
   const orders = useSelector((state) => state.orders);
