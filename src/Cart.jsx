@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  addOrder,
-  clearCart,
-  decreaseQty,
-  increaseQty,
-  removeFromCart,
-} from './store';
+import { addOrder, clearCart, decreaseQty, increaseQty, removeFromCart, } from './store';
 import './Cart.css';
 import { calculationTotal, getCoupnDiscount } from './discount';
 import party from 'party-js';
@@ -47,18 +41,12 @@ function Cart() {
       alert('Please enter your email address.');
       return;
     }
-
     const ordersString = cartItems
       .map(
         (item) =>
-          `${item.name} - ₹${(
-            item.price *
-            item.quantity *
-            (1 - discountPercent / 100)
-          ).toFixed(2)} (${item.quantity} pcs)`
+          `${item.name} - ₹${(item.price * item.quantity * (1 - discountPercent / 100)).toFixed(2)} (${item.quantity} pcs)`
       )
       .join('\n');
-
     const templateParams = {
       order_id: `ORD-${Math.floor(Math.random() * 1000000)}`,
       orders: ordersString,
@@ -68,7 +56,6 @@ function Cart() {
       email: customerEmail.trim(),
       time: new Date().toLocaleString(),
     };
-
     emailjs
       .send(
         'service_vbwdi3c',
@@ -89,24 +76,16 @@ function Cart() {
         price: item.price,
         quantity: item.quantity,
         Image: item.Image,
-        total: (
-          item.price *
-          item.quantity *
-          (1 - discountPercent / 100)
-        ).toFixed(2),
+        total: (item.price * item.quantity * (1 - discountPercent / 100)).toFixed(2),
       })),
       totalPrice: finalPrice.toFixed(2),
       discountPercent,
     };
-
     dispatch(clearCart());
     dispatch(addOrder(purchaseDetails));
-
     Swal.fire({
       title: 'Purchase Complete!',
-      text: `Your order total is ₹${finalPrice.toFixed(
-        2
-      )}. Thank you for shopping with us!`,
+      text: `Your order total is ₹${finalPrice.toFixed(2)}. Thank you for shopping with us!`,
       icon: 'success',
       confirmButtonText: 'OK',
       confirmButtonColor: '#28a745',
@@ -116,7 +95,6 @@ function Cart() {
   return (
     <div className="cart-container">
       <h1 className="cart-title">🛒 Your Cart</h1>
-
       {cartItems.length === 0 ? (
         <p className="empty-cart">Your cart is empty</p>
       ) : (
@@ -129,17 +107,12 @@ function Cart() {
                 <div className="item-details">
                   <strong>{item.name}</strong>
                   <p>
-                    ₹{item.price} x {item.quantity} = ₹
-                    {(item.price * item.quantity).toFixed(2)}
+                    ₹{item.price} x {item.quantity} = ₹{(item.price * item.quantity).toFixed(2)}
                   </p>
                   {discountPercent > 0 && (
                     <p className="discounted-price">
                       → ₹
-                      {(
-                        item.price *
-                        item.quantity *
-                        (1 - discountPercent / 100)
-                      ).toFixed(2)}{' '}
+                      {(item.price * item.quantity * (1 - discountPercent / 100)).toFixed(2)}{' '}
                       after {discountPercent}% off
                     </p>
                   )}
@@ -147,9 +120,7 @@ function Cart() {
                 <div className="cart-buttons">
                   <button onClick={() => dispatch(increaseQty(item))}>+</button>
                   <button onClick={() => dispatch(decreaseQty(item))}>-</button>
-                  <button onClick={() => dispatch(removeFromCart(item))}>
-                    Remove
-                  </button>
+                  <button onClick={() => dispatch(removeFromCart(item))}>Remove</button>
                 </div>
               </li>
             ))}
@@ -193,7 +164,6 @@ function Cart() {
                 Apply
               </button>
             </div>
-
             {couponMessage && (
               <p
                 className={`coupon-message ${
@@ -222,10 +192,7 @@ function Cart() {
               >
                 ✅ Complete Purchase
               </button>
-              <button
-                onClick={handleCheckout}
-                className="checkout-btn email"
-              >
+              <button onClick={handleCheckout} className="checkout-btn email">
                 📧 Send Email Confirmation
               </button>
             </div>
@@ -238,17 +205,20 @@ function Cart() {
         <div className="payment-modal">
           <div className="payment-content cart-card" style={{ padding: '20px' }}>
             <h3>Select Payment Method</h3>
-
             <div style={{ display: 'flex', gap: '10px', marginBottom: '15px' }}>
               <button
-                className={`payment-option-btn ${paymentMethod === 'upi' ? 'active' : ''}`}
+                className={`payment-option-btn ${
+                  paymentMethod === 'upi' ? 'active' : ''
+                }`}
                 onClick={() => setPaymentMethod('upi')}
                 style={{ flex: 1 }}
               >
                 UPI
               </button>
               <button
-                className={`payment-option-btn ${paymentMethod === 'debitCredit' ? 'active' : ''}`}
+                className={`payment-option-btn ${
+                  paymentMethod === 'debitCredit' ? 'active' : ''
+                }`}
                 onClick={() => setPaymentMethod('debitCredit')}
                 style={{ flex: 1 }}
               >
@@ -260,10 +230,14 @@ function Cart() {
               <div>
                 <h4>Scan QR to Pay ₹{finalPrice.toFixed(2)}</h4>
                 <QRCode
-                  value={`upi://pay?pa=6300154969@ybl&pn=Manikantastore&am=${finalPrice.toFixed(2)}&cu=INR`}
+                  value={`upi://pay?pa=6300154969@ybl&pn=Manikantastore&am=${finalPrice.toFixed(
+                    2
+                  )}&cu=INR`}
                   size={150}
                 />
-                <p><strong>UPI ID:</strong> 6300154969@ybl</p>
+                <p>
+                  <strong>UPI ID:</strong> 6300154969@ybl
+                </p>
               </div>
             )}
 
@@ -315,7 +289,8 @@ function Cart() {
                 className="checkout-btn"
                 disabled={!paymentMethod}
                 onClick={() => {
-                  if (!paymentMethod) return alert('Please select payment method');
+                  if (!paymentMethod)
+                    return alert('Please select payment method');
                   handleCompletePurchase();
                   setShowPaymentModal(false);
                 }}
@@ -323,11 +298,14 @@ function Cart() {
               >
                 Confirm Payment
               </button>
-
               <button
                 className="checkout-btn"
                 onClick={() => setShowPaymentModal(false)}
-                style={{ flex: 1, backgroundColor: '#d9534f', borderColor: '#d43f3a' }}
+                style={{
+                  flex: 1,
+                  backgroundColor: '#d9534f',
+                  borderColor: '#d43f3a',
+                }}
               >
                 Cancel
               </button>

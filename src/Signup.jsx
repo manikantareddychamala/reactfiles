@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import "./Signup.css";
 import { useDispatch } from "react-redux";
 import { register as registerUser } from "./store"; 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Signup() {
   const {
@@ -27,10 +27,9 @@ function Signup() {
   return (
     <div className="signup-page">
       <div className="signup-box fade-in">
-        
-        {/* ✅ Fresh Mart Logo */}
+        {/* Logo */}
         <img
-          src="Images/picks/Supermarket logo template _ Premium Vector (1).jpg"   // put your logo inside public/Images
+          src="Images/picks/Supermarket logo template _ Premium Vector (1).jpg"
           alt="Fresh Mart Logo"
           className="signup-logo"
         />
@@ -64,7 +63,7 @@ function Signup() {
             placeholder="🔒 Password"
             {...register("password", {
               required: "Password is required",
-              minLength: { value: 6, message: "Min 6 characters" },
+              minLength: { value: 6, message: "Minimum 6 characters" },
             })}
           />
           {errors.password && <span className="error">{errors.password.message}</span>}
@@ -83,8 +82,9 @@ function Signup() {
           <button type="submit">Sign Up</button>
         </form>
 
+        {/* Login link */}
         <p className="login-link">
-          Already have an account? <a href="/login">Login</a>
+          Already have an account? <Link to="/Signin">Login</Link>
         </p>
       </div>
     </div>

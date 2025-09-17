@@ -24,12 +24,15 @@ function Signin() {
       return;
     } else setPasswordError("");
 
-    if (username === "Mani" && password === "mani") {
-      alert("Login Success ✅");
-      navigate("/cart");
-    } else {
-      alert("Invalid username or password ❌");
-    }
+    const user = users.find(
+  (u) => u.username === username && u.password === password);
+  
+  if (user) {
+  alert(`Login Success ✅ Welcome, ${user.username}`);
+  navigate("/cart");
+} else {
+  alert("Invalid username or password ❌");
+}
   };
 
   return (
@@ -142,3 +145,4 @@ function Signin() {
 }
 
 export default Signin;
+

@@ -166,10 +166,14 @@ export let { addToCart, removeFromCart, increaseQty, decreaseQty, clearCart } = 
 
 let registerdetails = createSlice({
   name: "registers",
-  initialState:{users: []},
+  initialState: {
+    users: [],
+    currentUser: null,
+    isAuthenticated: false,
+  },
   reducers: {
     register: (state, action) => {
-      state.users.push(action.payload)
+      state.users.push(action.payload);
     },
     login: (state, action) => {
       const { username, password } = action.payload;
@@ -191,8 +195,7 @@ let registerdetails = createSlice({
   },
 });
 
-export let {register} = registerdetails.actions;
-
+export let { register, login, logout } = registerdetails.actions;
 
 
 // ---------------- Orders Slice ----------------
